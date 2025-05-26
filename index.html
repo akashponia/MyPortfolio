@@ -10,106 +10,157 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-
         body {
             background-color: #fefcfc;
+            font-family: 'Poppins', sans-serif;
         }
 
         header {
             background-color: black;
-            height: 60px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 100%;
-            font-size: 1.3rem;
-        }
-
-        .menu ul {
-            display: flex;
-        }
-
-        .menu ul li {
-            list-style: none;
-            padding: 10px;
-        }
-
-        .menu ul li a {
-            text-decoration: none;
-            color: white;
+            padding: 10px 0;
         }
 
         .logo {
             color: white;
+            font-size: 1.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar-toggler {
+            background-color: white !important;
         }
 
         .Intro {
-            display: flex;
-            justify-content: space-around;
+            padding: 2rem 0;
         }
 
-        .Intro>div {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            font-size: 1.5rem;
-            width: 35%;         
+        .TextIntro {
+            text-align: center;
         }
 
-        .TextIntro > div > span{
+        .TextIntro div {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .TextIntro div span {
             color: blue;
-        }
-
-        /* .TextIntro {
-            background-color: blue;
-        } */
-
-        .bgImage {
-            background-color: aqua;
         }
 
         .bgImage img {
             width: 100%;
-            height: 100%;
+            height: auto;
+            display: block; /* To remove extra space below image */
+        }
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) {
+            .Intro {
+                padding: 3rem 0;
+            }
+
+            .TextIntro {
+                text-align: left;
+            }
+
+            .TextIntro div {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            .Intro {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 4rem 2rem;
+            }
+
+            .TextIntro {
+                width: 45%;
+            }
+
+            .bgImage {
+                width: 45%;
+            }
+
+            .TextIntro div {
+                font-size: 1.7rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            .TextIntro div {
+                font-size: 2rem;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            .Intro {
+                padding: 5rem 3rem;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="logo">Akash's Portfolio</div>
-            <div class="menu">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Skills</a></li>
-                    <li><a href="/">Education</a></li>
-                    <li><a href="/">Experience</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">Akash's Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Experience</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-    <section class="Intro">
+    <section class="Intro container mt-5">
         <div class="TextIntro">
             <div>
                 Hi, I am <span>Akash Ponia</span>
             </div>
-            <div>And I am a Full Stack Developer </div>
+            <div>And I am a Full Stack Developer</div>
         </div>
         <div class="bgImage">
-            <img src="bgImage.jpg" alt="">
+            <img src="bgImage.jpg" alt="Background Image" class="img-fluid">
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
