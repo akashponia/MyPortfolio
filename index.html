@@ -22,9 +22,17 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         header {
             background-color: black;
             padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
         }
 
         nav {
@@ -73,7 +81,7 @@
 
         .TextIntro div {
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 2rem;
         }
 
         .TextIntro div span {
@@ -132,6 +140,8 @@
         .sectionHeading {
             font-size: 3rem;
             font-weight: bold;
+            text-align: center;
+            text-decoration: underline;
         }
 
         .skills {
@@ -161,11 +171,55 @@
             width: 100%;
         }
 
+        .workCard {
+            display: flex;
+            height: 180px;
+            width: 100%;
+            border-bottom: 2px Solid #f1eaea;
+            ;
+        }
+
+        .projectImage {
+            width: 35%;
+        }
+
+        .projectImage img {
+            height: 80%;
+
+            display: block;
+            margin: 10px auto;
+        }
+
+        .ProjectInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 75%;
+            box-sizing: border-box;
+            padding: 0px 30px;
+        }
+
+        .projectheading {
+            font-weight: bold;
+            font-size: 1.7rem;
+        }
+
+        .projectDiscription {
+            font-size: .8rem;
+        }
+
         footer {
             background-color: black;
             color: white;
             padding: 10px 0px;
             text-align: center;
+        }
+
+        .content {
+            margin-top: 70px;
+            /* height of the header to avoid overlap */
+            padding: 1rem;
         }
     </style>
 </head>
@@ -181,130 +235,186 @@
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="/">Home</a>
+                        <a href="#Intro">Home</a>
                     </li>
                     <li>
                         <a href="/">About</a>
                     </li>
                     <li>
-                        <a href="/">Skills</a>
+                        <a href="#skills">Skills</a>
                     </li>
                     <li>
-                        <a href="/">Education</a>
+                        <a href="#Education">Education</a>
                     </li>
                     <li>
-                        <a href="/">Experience</a>
+                        <a href="#MyWork">Experience</a>
                     </li>
                 </ul>
             </div>
 
         </nav>
     </header>
-    <section class="Intro">
-        <div class="TextIntro">
-            <div>
-                Hi, I am <span>Akash Ponia</span>
+    <div class="content">
+        <section class="Intro" id="Intro">
+            <div class="TextIntro">
+                <div>
+                    Hi, I am <span>Akash Ponia</span>
+                </div>
+                <div>And I am a Full Stack Developer</div>
             </div>
-            <div>And I am a Full Stack Developer</div>
-        </div>
-        <div class="bgImage">
-            <img src="bgImage.jpg" alt="Background Image" class="img-fluid">
-        </div>
-    </section>
-    <section class="Education">
-        <div class="sectionHeading">
-            Education
-        </div>
-        <div class="left">
-            <div class="imgLogoContainer">
-                <img src="jsslogoicon.png" alt="">
+            <div class="bgImage">
+                <img src="bgImage.jpg" alt="Background Image" class="img-fluid">
             </div>
+        </section>
+        <section class="Education" id="Education">
+            <div class="sectionHeading">
+                Education
+            </div>
+            <div class="left">
+                <div class="imgLogoContainer">
+                    <img src="jsslogoicon.png" alt="">
+                </div>
 
 
-            <div class="Info">
-                <h3>Master Of Compurter Application</h3>
-                <span>2016-2019</span>
-                <p>JSS Acedamy Of Technical Education, Noida</p>
+                <div class="Info">
+                    <h3>Master Of Compurter Application</h3>
+                    <span>2016-2019</span>
+                    <p>JSS Acedamy Of Technical Education, Noida</p>
+                </div>
             </div>
-        </div>
-        <div class="right">
-            <div class="Info">
-                <h3>Bachelor of Science</h3>
-                <span>2013-2016</span>
-                <p>Dr Bhimrao Ambedkar University, Agra</p>
-            </div>
-            <div class="imgLogoContainer">
-                <img src="DrBrAmbedkarUniversityLogo.webp" alt="">
-            </div>
-
-        </div>
-        <div class="left">
-            <div class="imgLogoContainer">
-                <img src="UpBoardLogo.jpg" alt="">
-            </div>
-
-
-            <div class="Info">
-                <h3>Intermediate</h3>
-                <span>2013</span>
-                <p>Uttar Pradesh Madhyamik Shiksha Parishad</p>
-            </div>
-        </div>
-        <div class="right">
-            <div class="Info">
-                <h3>HighSchool</h3>
-                <span>2011</span>
-                <p>Uttar Pradesh Madhyamik Shiksha Parishad</p>
-            </div>
-            <div class="imgLogoContainer">
-                <img src="UpBoardLogo.jpg" alt="">
-            </div>
-
-        </div>
-    </section>
-    <section class="skills">
-        <div class="sectionHeading">
-            Top Skills
-        </div>
-        <div class="skillsTxt">
-            Here i can do work and understanding with my processed skill is:
-        </div>
-        <div class="skillsCards">
-            <div class="card">
-
-                <img src="NET_Core_Logo.svg.png" alt="">
+            <div class="right">
+                <div class="Info">
+                    <h3>Bachelor of Science</h3>
+                    <span>2013-2016</span>
+                    <p>Dr Bhimrao Ambedkar University, Agra</p>
+                </div>
+                <div class="imgLogoContainer">
+                    <img src="DrBrAmbedkarUniversityLogo.webp" alt="">
+                </div>
 
             </div>
-            <div class="card">
+            <div class="left">
+                <div class="imgLogoContainer">
+                    <img src="UpBoardLogo.jpg" alt="">
+                </div>
 
-                <img src="CSharpLogo.jpeg">
 
+                <div class="Info">
+                    <h3>Intermediate</h3>
+                    <span>2013</span>
+                    <p>Uttar Pradesh Madhyamik Shiksha Parishad</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="Info">
+                    <h3>HighSchool</h3>
+                    <span>2011</span>
+                    <p>Uttar Pradesh Madhyamik Shiksha Parishad</p>
+                </div>
+                <div class="imgLogoContainer">
+                    <img src="UpBoardLogo.jpg" alt="">
+                </div>
 
             </div>
-            <div class="card">
-
-                <img src="SqlLogo.png" alt="">
-
+        </section>
+        <section class="skills" id="skills">
+            <div class="sectionHeading">
+                Top Skills
             </div>
-            <div class="card">
-
-                <img src="JavaScriptLogo.png" alt="">
-
+            <div class="skillsTxt">
+                Here i can do work and understanding with my processed skill is:
             </div>
-            <div class="card">
+            <div class="skillsCards">
+                <div class="card">
 
-                <img src="HtmlLogo01.jpg" alt="">
+                    <img src="NET_Core_Logo.svg.png" alt="">
+
+                </div>
+                <div class="card">
+
+                    <img src="CSharpLogo.jpeg">
 
 
+                </div>
+                <div class="card">
+
+                    <img src="SqlLogo.png" alt="">
+
+                </div>
+                <div class="card">
+
+                    <img src="JavaScriptLogo.png" alt="">
+
+                </div>
+                <div class="card">
+
+                    <img src="HtmlLogo01.jpg" alt="">
+
+
+                </div>
+                <div class="card">
+
+                    <img src="CssLogo.jpg" alt="">
+
+
+                </div>
             </div>
-            <div class="card">
-
-                <img src="CssLogo.jpg" alt="">
-
-
+        </section>
+        <section class="ExperienceInfo" id="MyWork">
+            <div class="sectionHeading">
+                My Work
             </div>
-        </div>
-    </section>
+            <div class="workCard">
+                <div class="projectImage">
+                    <img src="Project1.png" alt="">
+                </div>
+                <div class="ProjectInfo">
+                    <p class="projectheading">Partner Portal</p>
+                    <span>Jan 2019 - July 2020</span>
+                    <div class="projectDiscription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nobis mollitia optio accusantium!
+                        Doloribus fuga tempore cupiditate tempora dolores dolore eius, officiis doloremque id voluptas
+                        earum
+                        repellendus illum asperiores iure.
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="workCard">
+                <div class="projectImage">
+                    <img src="Project2.jpg" alt="">
+                </div>
+                <div class="ProjectInfo">
+                    <p class="projectheading">Cloud Pilot</p>
+                    <span>Sep 2020 - Dec 2023</span>
+                    <div class="projectDiscription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nobis mollitia optio accusantium!
+                        Doloribus fuga tempore cupiditate tempora dolores dolore eius, officiis doloremque id voluptas
+                        earum
+                        repellendus illum asperiores iure.
+                    </div>
+
+                </div>
+            </div>
+            <div class="workCard">
+                <div class="projectImage">
+                    <img src="Project3.JPG" alt="">
+                </div>
+                <div class="ProjectInfo">
+                    <p class="projectheading">AI Factory</p>
+                    <span>Feb 2024 - Present</span>
+                    <div class="projectDiscription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nobis mollitia optio accusantium!
+                        Doloribus fuga tempore cupiditate tempora dolores dolore eius, officiis doloremque id voluptas
+                        earum
+                        repellendus illum asperiores iure.
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
 
     <footer>
         ©All Right Reserved, Akash Ponia
