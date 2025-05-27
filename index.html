@@ -10,9 +10,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
         body {
             background-color: #fefcfc;
             font-family: 'Poppins', sans-serif;
@@ -23,27 +27,48 @@
             padding: 10px 0;
         }
 
+        nav {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
         .logo {
             color: white;
             font-size: 1.5rem;
         }
 
-        .navbar-nav .nav-link {
-            color: white !important;
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
+        .menu {
+            display: flex;
         }
 
-        .navbar-toggler {
-            background-color: white !important;
+        .menu>ul {
+            display: flex;
+            align-items: center;
         }
+
+        .menu>ul li {
+            list-style: none;
+            padding: 0px 10px;
+        }
+
+        .menu>ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
 
         .Intro {
-            padding: 2rem 0;
+            display: flex;
+            justify-content: space-around;
         }
 
         .TextIntro {
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 35%;
         }
 
         .TextIntro div {
@@ -55,99 +80,127 @@
             color: blue;
         }
 
+        .bgImage {
+            width: 35%;
+        }
+
         .bgImage img {
             width: 100%;
             height: auto;
-            display: block;
-            /* To remove extra space below image */
         }
 
-        /* Small devices (landscape phones, 576px and up) */
-        @media (min-width: 576px) {
-            .Intro {
-                padding: 3rem 0;
-            }
-
-            .TextIntro {
-                text-align: left;
-            }
-
-            .TextIntro div {
-                font-size: 1.5rem;
-            }
+        .Education {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* Medium devices (tablets, 768px and up) */
-        @media (min-width: 768px) {
-            .Intro {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                padding: 4rem 2rem;
-            }
-
-            .TextIntro {
-                width: 45%;
-            }
-
-            .bgImage {
-                width: 45%;
-            }
-
-            .TextIntro div {
-                font-size: 1.7rem;
-                margin-bottom: 1.5rem;
-            }
+        .left {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            border-bottom: 2px solid #f1eaea;
+            padding: 10px 0px;
         }
 
-        /* Large devices (desktops, 992px and up) */
-        @media (min-width: 992px) {
-            .TextIntro div {
-                font-size: 2rem;
-            }
+        .Education img {
+            height: 100%;
         }
 
-        /* Extra large devices (large desktops, 1200px and up) */
-        @media (min-width: 1200px) {
-            .Intro {
-                padding: 5rem 3rem;
-            }
+        .imgLogoContainer {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .Info {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            border-bottom: 2px solid #f1eaea;
+            padding: 10px 0px;
+        }
+
+        .sectionHeading {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .skillsCards {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            padding: 10px 0px;
+        }
+
+        .card {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 10px 0px;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand logo" href="#">Akash's Portfolio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Education</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Experience</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav>
+            <div class="logo">
+                Akash's Portfolio
             </div>
+
+
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/">About</a>
+                    </li>
+                    <li>
+                        <a href="/">Skills</a>
+                    </li>
+                    <li>
+                        <a href="/">Education</a>
+                    </li>
+                    <li>
+                        <a href="/">Experience</a>
+                    </li>
+                </ul>
+            </div>
+
         </nav>
     </header>
-    <section class="Intro container mt-5">
+    <section class="Intro">
         <div class="TextIntro">
             <div>
                 Hi, I am <span>Akash Ponia</span>
@@ -158,10 +211,104 @@
             <img src="bgImage.jpg" alt="Background Image" class="img-fluid">
         </div>
     </section>
+    <section class="Education">
+        <div class="sectionHeading">
+            Education
+        </div>
+        <div class="left">
+            <div class="imgLogoContainer">
+                <img src="jsslogoicon.png" alt="">
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+
+            <div class="Info">
+                <h3>Master Of Compurter Application</h3>
+                <span>2016-2019</span>
+                <p>JSS Acedamy Of Technical Education, Noida</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="Info">
+                <h3>Bachelor of Science</h3>
+                <span>2013-2016</span>
+                <p>Dr Bhimrao Ambedkar University, Agra</p>
+            </div>
+            <div class="imgLogoContainer">
+                <img src="DrBrAmbedkarUniversityLogo.webp" alt="">
+            </div>
+
+        </div>
+        <div class="left">
+            <div class="imgLogoContainer">
+                <img src="UpBoardLogo.jpg" alt="">
+            </div>
+
+
+            <div class="Info">
+                <h3>Intermediate</h3>
+                <span>2013</span>
+                <p>Uttar Pradesh Madhyamik Shiksha Parishad</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="Info">
+                <h3>HighSchool</h3>
+                <span>2011</span>
+                <p>Uttar Pradesh Madhyamik Shiksha Parishad</p>
+            </div>
+            <div class="imgLogoContainer">
+                <img src="UpBoardLogo.jpg" alt="">
+            </div>
+
+        </div>
+    </section>
+    <section class="skills">
+        <div class="sectionHeading">
+            Top Skills
+        </div>
+        <div class="skillsTxt">
+            Here i can do work and understanding with my processed skill is:
+        </div>
+        <div class="skillsCards">
+            <div class="card">
+
+                <img src="NET_Core_Logo.svg.png" alt="">
+
+            </div>
+            <div class="card">
+
+                <img src="CSharpLogo.jpeg">
+
+
+            </div>
+            <div class="card">
+
+                <img src="SqlLogo.png" alt="">
+
+            </div>
+            <div class="card">
+
+                <img src="JavaScriptLogo.png" alt="">
+
+            </div>
+            <div class="card">
+
+                <img src="HtmlLogo01.jpg" alt="">
+
+
+            </div>
+            <div class="card">
+
+                <img src="CssLogo.jpg" alt="">
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        ©All Right Reserved, Akash Ponia
+    </footer>
 </body>
 
 </html>
